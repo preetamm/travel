@@ -11,8 +11,10 @@ function success(pos) {
   console.log(`Latitude : ${crd.latitude}`);
   console.log(`Longitude: ${crd.longitude}`);
   console.log(`More or less ${crd.accuracy} meters.`);
-  let model = document.createElement('a-entity');
-  model.setAttribute('gps-entity-place', `latitude: ${crd.latitude}; longitude: ${crd.longitude};`);
+  let model = document.querySelector('a-entity');
+  if(!document.querySelector('a-entity').hasAttribute("gps-entity-place")){
+    model.setAttribute('gps-entity-place', `latitude: ${crd.latitude}; longitude: ${crd.longitude};`);
+  }
 }
 
 function error(err) {

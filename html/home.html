@@ -10,8 +10,7 @@
     <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
     <script>
-      THREEx.ArToolkitContext.baseURL =
-        "https://raw.githack.com/jeromeetienne/ar.js/master/three.js/";
+      THREEx.ArToolkitContext.baseURL = "https://raw.githack.com/jeromeetienne/ar.js/master/three.js/";
     </script>
   </head>
 
@@ -21,9 +20,17 @@
       embedded
       arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;"
     >
-      <a-camera gps-camera rotation-reader>
-      </a-camera>
-      <a-entity gltf-model="./assets/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" gps-entity-place="longitude: 19.211670; latitude: 73.082092;" animation-mixer/>
+      <a-camera gps-camera rotation-reader> </a-camera>
+      <a-entity
+        gltf-model="./assets/scene.gltf"
+        rotation="0 180 0"
+        scale="0.15 0.15 0.15"
+        gps-entity-place="longitude: 19.211670; latitude: 73.082092;"
+        animation-mixer
+      />
     </a-scene>
   </body>
+  <script src="../main.js"></script>
 </html>
+
+//long =  73.08181809999999 latt = 19.211748699999998
